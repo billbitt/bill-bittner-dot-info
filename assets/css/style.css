@@ -1,64 +1,71 @@
-/*generic sections and content boxes */
+
 body {
 	background-image: url("../images/background.png");
 }
 
-.topBar {
+.top-bar {
 	overflow: auto;
 	background-color: #ffffff;
-	border-bottom: #cccccc solid 2px;  /* is this list correct?*/  /* Did it work? If the answer is yes, sure. Usually, devs will do 2px solid #color */
+	border-bottom: solid 2px #cccccc;
 }
 
-.topWrap {
-	/*background-color: yellow;*/
+.top-wrap {
 	overflow: auto;
 	width: 960px;
 	margin: auto;
 }
 
-.topBar__name {
+.top-bar-name {
 	float: left;
 	background-color: #4aaaa5;
 	padding: 22px 30px 22px 30px;
 }
 
-.topBar__navigation {
- 	/*background-color: orange;*/  /*I like that you used test cases to make sure that things were workign the way they were supposed to. When you're done, clean this up by taking it out*/
+.top-bar-navigation {
  	float: right;
- 	margin-top: 35px;
+ 	overflow: auto;
+ 	margin: 0px 0px 0px 0px;
+	padding: 35px 0px 5px 0px;
  	color: #dddddd;
 }
 
-.middleBar {
-	/*background-color: purple;*/
+.nav-link-wrap {
+	float: left;
+	margin: 0px 0px 0px 0px;
+	text-align: center;
+}
+.nav-link-spacer {
+	float: left;
+	margin: 0px 5px 0px 5px;
+}
+
+.middle-bar {
 	clear: both;
 	overflow: auto;
 }
 
-.middleWrap {
-	/*background-color: yellow;*/
+.middle-wrap {
 	overflow: auto;
 	margin: auto;
 	padding: 40px 0px 40px 0px;
 	width: 960px;
 }
 
-.contentBox {
+.middle-bar-content-box {
+	overflow: auto;
 	border: #dddddd solid 1px;
 	padding: 30px 30px 30px 30px;
 	background-color: #ffffff;
 }
 
-.contentBox__main {
+.middle-bar-content-box__main {
 	float: left;
   	width: 590px;
-  	overflow: auto;
 }
 
-.contentBox__connect {
+.middle-bar-content-box__connect {
 	float: right;
 	width: 210px;
-	overflow: auto;
 }
 
 footer {
@@ -66,40 +73,37 @@ footer {
 	color: #cccccc;
 	border-top: #4aaaa5 solid 8px;
 	text-align: center;
+	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 	font-size: small;
 	padding-top: 20px;
 }
 
-/*about page items */
-#profilePic {
+#profile-pic {
 	width: 200px;
 	float: left;
 	margin: 10px 25px 10px 0px;
 }
 
-/*portfolio page items*/
-.portfolioItem__odd {
+.portfolio-item {
+	position: relative;
+	width: 275px;
+	height: 205px;
+	margin: 30px 0px 30px 0px;
+}
+.portfolio-item__left {
 	float: left;
-	position: relative;
-	width: 275px;
-	height: 205px;
-	margin: 30px 0px 30px 0px;
 }
 
-.portfolioItem__even {
+.portfolio-item__right {
 	float: right;
-	position: relative;
-	width: 275px;
-	height: 205px;
-	margin: 30px 0px 30px 0px;
 }
 
-.portfolioPic {
+.portfolio-pic {
 	width: 100%;
 	height: 100%;
 }
 
-.portfolioTitle {
+.portfolio-title {
 	position: absolute;
 	bottom: 10px;
 	width: 100%;
@@ -107,12 +111,11 @@ footer {
 	background-color: #4aaaa5;
 }
 
-/*contact page elements*/
 form {
 	margin: 30px 0px 0px 0px;
 }
 
-input {
+input, textarea {
 	margin: 10px 0px 20px 0px;
 	border: #CCCCCC solid 1px;
 	padding: 10px;
@@ -121,12 +124,7 @@ input {
 }
 
 textarea {
-	margin: 10px 0px 20px 0px;
-	border: #CCCCCC solid 1px;
-	padding: 10px;
-	width: 570px;
 	height: 200px;
-	color: #CCCCCC;
 }
 
 button {
@@ -142,30 +140,25 @@ button:hover {
 	cursor: pointer;
 }
 
-/*general elements*/
-
-
-
 hr {
 	border: 0px;
 }
 
-.hr--content {
+.hr__content {
 	margin-top: 20px;
 	margin-bottom: 20px;
 	height: 3px;
 	background-color: #dddddd;
 }
 
-.hr--contact {
+.hr__contact {
 	margin-top: 15px;
 	margin-bottom: 15px;
 	height: 2px;
 	background-color: #eeeeee;
 }
 
-/*text styles*/ 
-h1, h2, h3, h4 {  /* nice work chaining your elements! */
+h1, h2, h3, h4 {
 	font-family: 'Georgia', Times, 'Times New Roman', serif;
 	font-weight: bold;
 	color: #4aaaa5;
@@ -176,7 +169,7 @@ h1 {
 	line-height: 1.5;
 }
 
-.h1--topBar {
+.h1__top-bar {
 	color: #ffffff;
 }
 
@@ -184,19 +177,19 @@ h2 {
 	font-size: x-large;
 }
 
-h3 {
-	font-size: large;
-
-}
-
-.h2--portfolioTitle {
+.h2__portfolio-title {
 	color: #ffffff;
 	font-weight: normal;
 	line-height: 2;
 	margin: 5px 0px 5px 0px;
 }
 
-.standardText {
+h3 {
+	font-size: large;
+
+}
+
+.standard-text {
 	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 	color: #777777;
 	font-size: large;
@@ -207,68 +200,218 @@ p {
 	margin: 10px 0px 10px 0px;
 }
 
-/*link styles*/
 a {
 	text-decoration: none;
 }
 
-.contactLink {  /* nice!!! */
+.img__contact-link {
 	float: left;
 	height: 60px;
 	width: 60px;
 	margin-top: 5px;
 }
 
-.contactLink--padded {
-	margin-right: 14px;
+.img__contact-link--animated-1s {
+	animation-name: linkBorderHighlight;
+    animation-duration: 1s;
 }
 
-.contactLink:hover {
+.img__contact-link--animated-2s  {
+	animation-name: linkBorderHighlight;
+    animation-duration: 2s;
+}
+
+.img__contact-link--animated-3s  {
+	animation-name: linkBorderHighlight;
+    animation-duration: 3s;
+}
+
+.img__contact-link:hover {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.navLink {
+.contact-link-spacer {
+	float: left;
+	width: 14px;
+	height: 10px;
+}
+
+.nav-link {
 	color: #777777;
 }
 
-.navLink:hover { /* excellent use of pseudo classes to achieve your goal */
+.nav-link:hover {
 	color: #4aaaa5;
 }
 
-.navLink--left {
-	margin: 0px 10px 0px 0px;
-}
-
-.navLink--middle {
-	margin: 0px 10px 0px 10px;
-}
-
-.navLink--right {
-	margin: 0px 0px 0px 10px;
-}
-
-.portfolioLink:hover { /* nice attention to detail */
+.portfolio-link:hover {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/* stick footer css */
-html, body {
-	margin: 0px;
-	padding: 0px;
-	border: 0px;
-	height: 100%;
-}
-
-.pageWrap {
+.page-wrap {
 	min-height: 100%;
 	margin-bottom: -68px;
 }
 
-.pageWrap:after { /* it's cool tha tyou made this an after pseudoclass. do you really need to? */
+.page-wrap:after {
 	content: "";
 	display: block;
 }
 
-footer, .pageWrap:after {
+footer, .page-wrap:after {
 	height: 60px;
+}
+
+@keyframes linkBorderHighlight {
+    0% {
+   		box-shadow: none;
+    }
+    50% {
+    	box-shadow: 0 4px 8px 0 orange, 0 6px 20px 0 yellow;
+    }
+    100% {
+   		box-shadow: none;
+    }
+}
+
+@media screen and (max-width: 980px) {
+
+	.top-wrap {
+		width: 730px;
+	}
+
+	.middle-wrap {
+		width: 730px;
+	}
+
+	.middle-bar-content-box__main {
+		width: 360px;
+	}
+	
+	#profile-pic {
+		width: 100%;
+		float: none;
+		margin: 10px 0px 10px 0px;
+	}
+	
+	.portfolio-item {
+		width: 100%;
+		height: auto;
+	}
+
+	.portfolio-item__left, .portfolio-item__right {
+		float: none;
+	}
+
+	input {
+		padding: 10px 5% 10px 5%;
+		width: 90%;
+		color: #cccccc;
+	}
+
+	textarea {
+		padding: 10px 5% 10px 5%;
+		width: 90%;
+		height: 200px;
+		color: #CCCCCC;
+	}
+
+}
+
+@media screen and (max-width: 768px) {
+
+	.top-wrap {
+		width: 90%;
+		padding: 0px 5% 0px 5%;
+	}
+
+	.middle-wrap {
+		width: 90%;
+		padding: 15px 5% 15px 5%;
+	}
+
+	.middle-bar-content-box__main {
+		float: none;
+		margin: 15px 0px 15px 0px;
+		padding: 15px 5% 15px 5%;  
+	  	width: 90%;
+	  	overflow: auto;
+	}
+
+	.middle-bar-content-box__connect {
+		float: none;
+		margin: 15px 0px 15px 0px;
+		padding: 15px 5% 15px 5%; 
+		width: 90%;
+		overflow: auto;
+	}
+	
+	#profile-pic {
+		float: left;
+		margin: 10px 25px 10px 0px;
+		width: 50%;
+	}
+
+	.portfolio-item {
+		width: 45%;
+	}
+
+	.portfolio-item__left {
+		float: left;
+	}
+
+	.portfolio-item__right {
+		float: right;
+	}
+
+}
+
+@media screen and (max-width: 640px) {
+
+	.top-wrap {
+		padding: 0px 0px 0px 0px;
+		margin: 0px 0px 0px 0px;
+		width: 100%;
+		position: static;
+	}
+	.top-bar-name {
+		float: none;
+		padding: 22px 0px 22px 0px;
+		width: 100%;
+		text-align: center;
+		background-color: #4aaaa5;
+	}
+
+	.top-bar-navigation {
+	 	float: none;
+	 	margin: 0px 0px 0px 0px;
+	 	padding: 35px 0px 35px 0px;
+	 	width: 100%;
+	 	text-align: center;
+	 	color: #dddddd;
+	}
+
+	.nav-link-wrap {
+		float: left;
+		width: 32%;
+	}
+	.nav-link-spacer {
+		float: left;
+		margin: 0px 0px 0px 0px;
+	}
+
+	#profile-pic {
+		width: 100%;
+		float: none;
+		margin: 10px 0px 10px 0px;
+	}
+
+	.portfolio-item {
+		width: 100%;
+	}
+
+	.portfolio-item__left, .portfolio-item__right {
+		float: none;
+	}
+
 }
