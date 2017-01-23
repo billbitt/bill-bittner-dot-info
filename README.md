@@ -1,2 +1,3 @@
-# bill-bittner-site
-basic site about myself, to be hosted on billbittner.info
+# bill-bittner-dot-info
+This project is my pesonal website.  
+The site is hosted on heroku and is available at [billbittner.info](http://www.billbittner.info).
