@@ -3,4 +3,4 @@ This project is my personal website.  I built the site using HTML and CSS.  In a
 
 The site is hosted on heroku and is available at [billbittner.info](http://www.billbittner.info).  Check it out!
 
-![bill bittner dot info screenshot](https://serene-caverns-20900.herokuapp.com/assets/images/bill-bittner-dot-info.png)
+![bill bittner dot info screenshot](http://i.imgur.com/fp0irYI.png)
