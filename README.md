@@ -9,3 +9,4 @@ The site is hosted on heroku and is available at [billbittner.info](http://www.b
 
 ### Future development plans
 * Integrate my blog 
+* Add page sumarizing github and related projects
